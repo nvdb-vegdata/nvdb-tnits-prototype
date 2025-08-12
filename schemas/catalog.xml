@@ -4,4 +4,5 @@
     <rewriteURI uriStartString="https://schemas.opengis.net/gml/3.2.1/" rewritePrefix="gml/3.2.1/"/>
     <rewriteURI uriStartString="http://spec.tn-its.eu/schemas/" rewritePrefix="tnits/"/>
     <rewriteURI uriStartString="https://spec.tn-its.eu/schemas/" rewritePrefix="tnits/"/>
+    <rewriteURI uriStartString="http://www.w3.org/1999/xlink" rewritePrefix=""/>
 </catalog>
