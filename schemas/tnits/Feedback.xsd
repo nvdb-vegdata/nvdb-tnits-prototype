@@ -4,16 +4,16 @@
 <!--==============================================================================================-->
 <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 <!--2018-01-10        01                 KJe      Manually change from gml:CodeType to gml:ReferenceType     -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:tnits="http://spec.tn-its.eu/schemas/" elementFormDefault="qualified"
-  targetNamespace="http://spec.tn-its.eu/schemas/" version="2018-01">
+<schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:tnits="http://spec.tn-its.eu/schemas/"
+        xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+        targetNamespace="http://spec.tn-its.eu/schemas/" version="2018-01">
   <include schemaLocation="RoadFeatures.xsd"/>
   <include schemaLocation="TNITS.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2"
-    schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+          schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="FeedbackInformation" substitutionGroup="gml:AbstractFeature"
-    type="tnits:FeedbackInformationType"/>
+           type="tnits:FeedbackInformationType"/>
   <complexType name="FeedbackInformationType">
     <complexContent>
       <extension base="gml:AbstractFeatureType">
@@ -73,7 +73,7 @@
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element abstract="true" name="FeedbackLogEvent" substitutionGroup="gml:AbstractFeature"
-    type="tnits:FeedbackLogEventType"/>
+           type="tnits:FeedbackLogEventType"/>
   <complexType abstract="true" name="FeedbackLogEventType">
     <complexContent>
       <extension base="gml:AbstractFeatureType">
@@ -89,7 +89,7 @@
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="FreeTextEvent" substitutionGroup="tnits:FeedbackLogEvent"
-    type="tnits:FreeTextEventType"/>
+           type="tnits:FreeTextEventType"/>
   <complexType name="FreeTextEventType">
     <complexContent>
       <extension base="tnits:FeedbackLogEventType">
@@ -107,7 +107,7 @@
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="GeneralFeedbackEvent" substitutionGroup="tnits:FeedbackLogEvent"
-    type="tnits:GeneralFeedbackEventType"/>
+           type="tnits:GeneralFeedbackEventType"/>
   <complexType name="GeneralFeedbackEventType">
     <complexContent>
       <extension base="tnits:FeedbackLogEventType">
@@ -116,7 +116,8 @@
             <annotation>
               <appinfo>
                 <targetElement xmlns="http://www.opengis.net/gml/3.2"
-                  >tnits:GeneralFeedbackEventCode</targetElement>
+                >tnits:GeneralFeedbackEventCode
+                </targetElement>
               </appinfo>
             </annotation>
           </element>
@@ -132,7 +133,7 @@
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="RoadFeatureEvent" substitutionGroup="tnits:FeedbackLogEvent"
-    type="tnits:RoadFeatureEventType"/>
+           type="tnits:RoadFeatureEventType"/>
   <complexType name="RoadFeatureEventType">
     <complexContent>
       <extension base="tnits:FeedbackLogEventType">

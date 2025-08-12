@@ -5,19 +5,19 @@
 <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 <!--2018-01-10        01                 KJe      Manually add gml 3.3 namespace, schema and datatype     -->
 
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:gmllr="http://www.opengis.net/gml/3.3/lr" xmlns:tnits="http://spec.tn-its.eu/schemas/"
-  elementFormDefault="qualified" targetNamespace="http://spec.tn-its.eu/schemas/" version="2018-01">
+<schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmllr="http://www.opengis.net/gml/3.3/lr"
+        xmlns:tnits="http://spec.tn-its.eu/schemas/" xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified" targetNamespace="http://spec.tn-its.eu/schemas/" version="2018-01">
   <include schemaLocation="Metadata.xsd"/>
   <include schemaLocation="RoadFeatures.xsd"/>
   <include schemaLocation="TNITS.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/lr"
-    schemaLocation="http://schemas.opengis.net/gml/3.3/linearRef.xsd"/>
+          schemaLocation="http://schemas.opengis.net/gml/3.3/linearRef.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2"
-    schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+          schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="Dataset" substitutionGroup="gml:AbstractFeature"
-    type="tnits:DatasetType"/>
+           type="tnits:DatasetType"/>
   <complexType abstract="true" name="DatasetType">
     <complexContent>
       <extension base="gml:AbstractFeatureType">
@@ -69,7 +69,7 @@
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="RoadFeatureDataset" substitutionGroup="tnits:Dataset"
-    type="tnits:RoadFeatureDatasetType"/>
+           type="tnits:RoadFeatureDatasetType"/>
   <complexType name="RoadFeatureDatasetType">
     <complexContent>
       <extension base="tnits:DatasetType">

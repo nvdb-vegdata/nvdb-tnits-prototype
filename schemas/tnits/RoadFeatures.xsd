@@ -7,17 +7,17 @@
 <!--2019-10-30        01                 KJe      Removed type for value (Any)     -->
 
 
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:tnits="http://spec.tn-its.eu/schemas/" elementFormDefault="qualified"
-  targetNamespace="http://spec.tn-its.eu/schemas/" version="2018-01">
+<schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:tnits="http://spec.tn-its.eu/schemas/"
+        xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+        targetNamespace="http://spec.tn-its.eu/schemas/" version="2018-01">
   <include schemaLocation="Conditions.xsd"/>
   <include schemaLocation="LocationReferencing.xsd"/>
   <include schemaLocation="TNITS.xsd"/>
   <include schemaLocation="Update.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2"
-    schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+          schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <element abstract="true" name="AbstractRoadFeatureProperty" substitutionGroup="gml:AbstractObject"
-    type="tnits:AbstractRoadFeaturePropertyType"/>
+           type="tnits:AbstractRoadFeaturePropertyType"/>
   <complexType abstract="true" name="AbstractRoadFeaturePropertyType">
     <sequence/>
   </complexType>
@@ -27,7 +27,7 @@
     </sequence>
   </complexType>
   <element name="GenericRoadFeatureProperty" substitutionGroup="tnits:AbstractRoadFeatureProperty"
-    type="tnits:GenericRoadFeaturePropertyType"/>
+           type="tnits:GenericRoadFeaturePropertyType"/>
   <complexType name="GenericRoadFeaturePropertyType">
     <complexContent>
       <extension base="tnits:AbstractRoadFeaturePropertyType">
@@ -54,24 +54,26 @@
           <element name="beginLifespanVersion" type="dateTime">
             <annotation>
               <documentation>Date and time at which this version of the spatial object was inserted
-                or changed in the spatial data set.</documentation>
+                or changed in the spatial data set.
+              </documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="endLifespanVersion" type="dateTime">
             <annotation>
               <documentation>Date and time at which this version of the spatial object was
-                superseded or retired in the spatial data set.</documentation>
+                superseded or retired in the spatial data set.
+              </documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="updateInfo" type="tnits:UpdateInfoPropertyType"/>
           <element name="source" type="gml:ReferenceType"/>
           <element name="type" type="gml:ReferenceType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="properties"
-            type="tnits:AbstractRoadFeaturePropertyPropertyType"/>
+                   type="tnits:AbstractRoadFeaturePropertyPropertyType"/>
           <element name="id" type="tnits:RoadFeatureIdPropertyType"/>
           <element minOccurs="0" name="condition" type="tnits:ConditionPropertyType"/>
           <element maxOccurs="unbounded" name="locationReference"
-            type="tnits:LocationReferencePropertyType"/>
+                   type="tnits:LocationReferencePropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -84,7 +86,7 @@
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="RoadFeatureId" substitutionGroup="gml:AbstractObject"
-    type="tnits:RoadFeatureIdType"/>
+           type="tnits:RoadFeatureIdType"/>
   <complexType name="RoadFeatureIdType">
     <sequence>
       <element name="providerId" type="string"/>
@@ -97,7 +99,7 @@
     </sequence>
   </complexType>
   <element name="RoadSignContent" substitutionGroup="gml:AbstractObject"
-    type="tnits:RoadSignContentType"/>
+           type="tnits:RoadSignContentType"/>
   <complexType name="RoadSignContentType">
     <sequence>
       <element minOccurs="0" name="value" type="gml:MeasureType"/>
@@ -111,14 +113,14 @@
     </sequence>
   </complexType>
   <element name="RoadSignProperty" substitutionGroup="tnits:AbstractRoadFeatureProperty"
-    type="tnits:RoadSignPropertyType"/>
+           type="tnits:RoadSignPropertyType"/>
   <complexType name="RoadSignPropertyType">
     <complexContent>
       <extension base="tnits:AbstractRoadFeaturePropertyType">
         <sequence>
           <element name="gddCode" type="gml:ReferenceType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="content"
-            type="tnits:RoadSignContentPropertyType"/>
+                   type="tnits:RoadSignContentPropertyType"/>
         </sequence>
       </extension>
     </complexContent>

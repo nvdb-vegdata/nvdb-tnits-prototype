@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:tnits="http://spec.tn-its.eu/schemas/" elementFormDefault="qualified"
-  targetNamespace="http://spec.tn-its.eu/schemas/" version="2018-01">
+<!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+<schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:tnits="http://spec.tn-its.eu/schemas/"
+        xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+        targetNamespace="http://spec.tn-its.eu/schemas/" version="2018-01">
   <include schemaLocation="TNITS.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2"
-    schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+          schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <element name="UpdateInfo" substitutionGroup="gml:AbstractObject" type="tnits:UpdateInfoType"/>
   <complexType name="UpdateInfoType">
     <sequence>

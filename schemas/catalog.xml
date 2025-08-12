@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+    <rewriteURI uriStartString="http://schemas.opengis.net/gml/3.2.1/" rewritePrefix="gml/3.2.1/"/>
+    <rewriteURI uriStartString="https://schemas.opengis.net/gml/3.2.1/" rewritePrefix="gml/3.2.1/"/>
+    <rewriteURI uriStartString="http://spec.tn-its.eu/schemas/" rewritePrefix="tnits/"/>
+    <rewriteURI uriStartString="https://spec.tn-its.eu/schemas/" rewritePrefix="tnits/"/>
+</catalog>
